@@ -1,0 +1,15 @@
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\bin\Debug\net5.0\AnimationCollectionAPI.DAL.deps.json
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\bin\Debug\net5.0\AnimationCollectionAPI.DAL.runtimeconfig.json
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\bin\Debug\net5.0\AnimationCollectionAPI.DAL.runtimeconfig.dev.json
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\bin\Debug\net5.0\AnimationCollectionAPI.DAL.dll
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\bin\Debug\net5.0\ref\AnimationCollectionAPI.DAL.dll
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\bin\Debug\net5.0\AnimationCollectionAPI.DAL.pdb
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.csproj.AssemblyReference.cache
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.AssemblyInfoInputs.cache
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.AssemblyInfo.cs
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.csproj.CoreCompileInputs.cache
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.dll
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\ref\AnimationCollectionAPI.DAL.dll
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.pdb
+D:\csharp_files\DSCC\AnimationCollectionAPI\AnimationCollectionAPI.DAL\obj\Debug\net5.0\AnimationCollectionAPI.DAL.genruntimeconfig.cache
