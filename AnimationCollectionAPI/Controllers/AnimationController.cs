@@ -24,41 +24,65 @@ namespace AnimationCollectionAPI.Controllers
 
         // GET: api/<AnimationController>
         [HttpGet]
-        public IActionResult Get()
+        public async Task<IActionResult> Get()
         {
-            var animations = _animationRepository.GetAll();
+            var animations = await _animationRepository.GetAllAsync();
             return new OkObjectResult(animations);
         }
 
         [HttpGet("{id}", Name = "Get")]
-        public IActionResult Get(int id)
+        public async Task<IActionResult> Get(int id)
         {
-            var product = _animationRepository.GetById(id);
+            var product = await _animationRepository.GetByIdAsync(id);
+            if (product == null)
+            {
+                return NotFound();
+            }
             return new OkObjectResult(product);
         }
 
         // POST api/<AnimationController>
         [HttpPost]
-        public IActionResult Post([FromBody] Animation animation)
+        public async Task<IActionResult> Post(Animation animation)
         {
-            using (var scope = new TransactionScope())
+            using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
             {
-                _animationRepository.Create(animation);
-                scope.Complete();
+                try
+                {
+                    await _animationRepository.CreateAsync(animation);
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(ex.Message);
+                }
+                finally
+                {
+                    scope.Complete();
+                }
                 return CreatedAtAction(nameof(Get), new { id = animation.Id }, animation);
             }
         }
 
         // PUT api/<AnimationController>/5
         [HttpPut("{id}")]
-        public IActionResult Put(int id, [FromBody] Animation animation)
+        public async Task<IActionResult> Put(int id, Animation animation)
         {
             if (animation != null)
             {
-                using (var scope = new TransactionScope())
+                using (var scope = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 {
-                    _animationRepository.Update(animation);
-                    scope.Complete();
+                    try
+                    {
+                        await _animationRepository.UpdateAsync(animation);
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                    finally
+                    {
+                        scope.Complete();
+                    }
                     return new OkResult();
                 }
             }
@@ -67,14 +91,13 @@ namespace AnimationCollectionAPI.Controllers
 
         // DELETE api/<AnimationController>/5
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var animation = _animationRepository.GetById(id);
-            if(animation == null)
+            if (!_animationRepository.Exists(id))
             {
-                return new NoContentResult();
+                return NotFound();
             }
-            _animationRepository.Delete(animation);
+            await _animationRepository.DeleteAsync(id);
             return new OkResult();
         }
     }

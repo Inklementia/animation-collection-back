@@ -18,31 +18,29 @@ namespace AnimationCollectionAPI.DAL.Repositories
         {
             _context = context;
         }
-        public void Create(TEntity entity)
+        public async Task CreateAsync(TEntity entity)
         {
-             _context.Set<TEntity>().Add(entity);
+            _context.Set<TEntity>().Add(entity);
+            await _context.SaveChangesAsync();
         }
 
-        public void Update(TEntity entity)
+        public async Task UpdateAsync(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
             _context.Set<TEntity>().Update(entity);
+            await _context.SaveChangesAsync();
         }
 
-        public void Delete(TEntity entity)
+        public async Task DeleteAsync(int id)
         {
+            var entity = _context.Set<TEntity>().FirstOrDefault(e => e.Id == id);
             _context.Set<TEntity>().Remove(entity);
+            await _context.SaveChangesAsync();
         }
 
-        public IEnumerable<TEntity> GetAll()
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            // get list in desc order by id
-            return _context.Set<TEntity>().OrderBy(e => e.Title);
-        }
-
-        public TEntity GetById(int id)
-        {
-            return  _context.Set<TEntity>().FirstOrDefault(e => e.Id == id);
+            return await _context.Set<TEntity>().FirstOrDefaultAsync(e => e.Id == id);
         }
         // check if that id exists
         public bool Exists(int id)
@@ -50,5 +48,9 @@ namespace AnimationCollectionAPI.DAL.Repositories
             return _context.Set<TEntity>().Any(e => e.Id == id);
         }
 
+        public async Task<List<TEntity>> GetAllAsync()
+        {
+            return await _context.Set<TEntity>().OrderByDescending(e => e.Id).ToListAsync();
+        }
     }
 }

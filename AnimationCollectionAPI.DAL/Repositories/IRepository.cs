@@ -10,10 +10,10 @@ namespace AnimationCollectionAPI.DAL.Repositories
     public interface IRepository<TEntity> where TEntity : IEntity
     {
         bool Exists(int id);
-        void Create(TEntity entity);
-        void Update(TEntity entity);
-        void Delete(TEntity entity);
-        TEntity GetById(int id);
-        IEnumerable<TEntity> GetAll();
+        Task CreateAsync(TEntity entity);
+        Task UpdateAsync(TEntity entity);
+        Task DeleteAsync(int id);
+        Task<TEntity> GetByIdAsync(int id);
+        Task<List<TEntity>> GetAllAsync();
     }
 }
