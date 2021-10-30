@@ -12,7 +12,7 @@ SyslogIdentifier=dscc-cw-8402-api
 User=ubuntu
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
-Environment=ASPNETCORE_URLS=http://*:80
+Environment=HOME=/root
 
 [Install]
 WantedBy=multi-user.target
