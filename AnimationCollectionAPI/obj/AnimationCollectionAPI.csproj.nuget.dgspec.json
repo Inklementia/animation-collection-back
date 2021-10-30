@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj": {}
+    "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj": {}
   },
   "projects": {
-    "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj": {
+    "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj",
+        "projectUniqueName": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj",
         "projectName": "AnimationCollectionAPI.DAL",
-        "projectPath": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj",
+        "projectPath": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj",
         "packagesPath": "C:\\Users\\inna2\\.nuget\\packages\\",
-        "outputPath": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\obj\\",
+        "outputPath": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programms\\Visual Studio\\Shared\\NuGetPackages"
@@ -78,14 +78,14 @@
         }
       }
     },
-    "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj": {
+    "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj",
+        "projectUniqueName": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj",
         "projectName": "AnimationCollectionAPI",
-        "projectPath": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj",
+        "projectPath": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI\\AnimationCollectionAPI.csproj",
         "packagesPath": "C:\\Users\\inna2\\.nuget\\packages\\",
-        "outputPath": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI\\obj\\",
+        "outputPath": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programms\\Visual Studio\\Shared\\NuGetPackages"
@@ -106,8 +106,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj": {
-                "projectPath": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj"
+              "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj": {
+                "projectPath": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj"
               }
             }
           }

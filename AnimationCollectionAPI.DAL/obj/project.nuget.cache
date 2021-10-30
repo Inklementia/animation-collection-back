@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BeIj5MqbKhkqVUk4r7xSVy15384euhm1J8Y3+VFn78FwHioF06Iy4HZayG404spiHCC1HxraQbw0nWmIpGtxJA==",
+  "dgSpecHash": "+Vqjg89dzEIYUrPu+O6JTtxDH7szWWgJKEDkS7zcgklZupTkjq8ONBlyfHemTpKOv2fKBiUESFOUmkeSczszWA==",
   "success": true,
-  "projectFilePath": "D:\\csharp_files\\DSCC\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj",
+  "projectFilePath": "D:\\csharp_files\\DSCC\\CW\\AnimationCollectionAPI\\AnimationCollectionAPI.DAL\\AnimationCollectionAPI.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\inna2\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\inna2\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

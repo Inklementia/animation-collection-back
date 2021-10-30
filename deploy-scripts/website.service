@@ -1,0 +1,17 @@
+[Unit]
+Description=ASP.NET Core micro-service based API on Linux
+
+[Service]
+WorkingDirectory=/var/www/DSCC_CW_8402_API_publish
+ExecStart=/usr/bin/dotnet /var/www/DSCC_CW_8402_API_publish/AnimationCollectionAPI.dll
+Restart=always
+# Restart service after 10 seconds if the dotnet service crashes:
+RestartSec=10
+KillSignal=SIGINT
+SyslogIdentifier=dscc-cw-8402-api
+User=ubuntu
+Environment=ASPNETCORE_ENVIRONMENT=Production
+Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
+
+[Install]
+WantedBy=multi-user.target
