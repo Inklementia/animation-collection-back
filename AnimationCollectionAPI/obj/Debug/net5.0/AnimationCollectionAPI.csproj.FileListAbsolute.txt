@@ -124,3 +124,4 @@ D:\csharp_files\DSCC\CW\AnimationCollectionAPI\AnimationCollectionAPI\obj\Debug\
 D:\csharp_files\DSCC\CW\AnimationCollectionAPI\AnimationCollectionAPI\obj\Debug\net5.0\ref\AnimationCollectionAPI.dll
 D:\csharp_files\DSCC\CW\AnimationCollectionAPI\AnimationCollectionAPI\obj\Debug\net5.0\AnimationCollectionAPI.pdb
 D:\csharp_files\DSCC\CW\AnimationCollectionAPI\AnimationCollectionAPI\obj\Debug\net5.0\AnimationCollectionAPI.genruntimeconfig.cache
+D:\csharp_files\DSCC\CW\AnimationCollectionAPI\AnimationCollectionAPI\bin\Debug\net5.0\AnimationCollectionAPI.xml

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AnimationCollectionAPI</name>
+    </assembly>
+    <members>
+        <member name="M:AnimationCollectionAPI.Controllers.AnimationController.Get">
+            <summary>
+            Gets the list of all Animations.
+            </summary>
+            <returns>The list of Animations.</returns>
+            <response code="200">If all requested Animations are found</response>
+        </member>
+        <member name="M:AnimationCollectionAPI.Controllers.AnimationController.Get(System.Int32)">
+            <summary>
+            Gets the details of a single Animation.
+            </summary>
+            <returns>A aingle Animation.</returns>
+            <response code="200">If requested Animation was found</response>
+            <response code="404">If requested Animation was not found</response>      
+        </member>
+        <member name="M:AnimationCollectionAPI.Controllers.AnimationController.Post(AnimationCollectionAPI.DAL.DBO.Animation)">
+            <summary>
+            Create a new Animation.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/Animation
+                {        
+                  "title": "The Legend of Vox Machina",
+                  "author": "John Doe",
+                  "description": "This is my first award-winning animation of 2020",
+                  "link" : "(any youtube link)"
+                }
+            </remarks>
+            <param name="animation"></param>     
+            <returns>A newly created Animation.</returns>
+            <response code="201">If returns the newly created Animation</response>
+            <response code="400">If created Animation is null</response>          
+        </member>
+        <member name="M:AnimationCollectionAPI.Controllers.AnimationController.Put(System.Int32,AnimationCollectionAPI.DAL.DBO.Animation)">
+            <summary>
+            Update a selected Animation.
+            </summary>
+            <remarks>
+            Sample request:
+            
+                PUT api/Animation/{id}
+                {  
+                  "id" : {id}
+                  "title": "New title",
+                  "author": "New author",
+                  "description": "New Description",
+                  "link" : "New YouTube Link"
+                }
+            </remarks>
+            <param name="animation"></param>     
+            <returns>A newly updated Animation.</returns>
+            <response code="200">If requested Animation was updated</response>
+            <response code="400">If requested Animation was not updated</response>   
+        </member>
+        <member name="M:AnimationCollectionAPI.Controllers.AnimationController.Delete(System.Int32)">
+            <summary>
+            Delete a selected Animation.
+            </summary>
+            <response code="200">If requested Animation was deleted</response>
+            <response code="404">If requested Animation was not found</response>   
+        </member>
+    </members>
+</doc>

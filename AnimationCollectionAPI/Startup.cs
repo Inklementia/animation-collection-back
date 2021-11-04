@@ -13,6 +13,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Reflection;
+using System.IO;
+using Microsoft.Extensions.Options;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace AnimationCollectionAPI
 {
@@ -39,8 +43,30 @@ namespace AnimationCollectionAPI
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "AnimationCollectionAPI", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { 
+                    Title = "AnimationCollectionAPI",
+                    Description = "A simple ASP.NET Core Micro-service based Web API for DSCC",
+                    Version = "v1",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "00008402",
+                        Email = "inna2001.a@gmail.com",
+                        Url = new Uri("https://github.com/inklementia")
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "MIT License",
+                        Url = new Uri("https://github.com/Inklementia/AnimationCollectionAPI/blob/main/LICENSE.TXT")
+                    },
+                  
+                });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
             });
+      
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,0 +1,253 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "AnimationCollectionAPI",
+    "description": "A simple ASP.NET Core Micro-service based Web API for DSCC",
+    "contact": {
+      "name": "00008402",
+      "url": "https://github.com/inklementia",
+      "email": "inna2001.a@gmail.com"
+    },
+    "license": {
+      "name": "MIT License",
+      "url": "https://github.com/Inklementia/AnimationCollectionAPI/blob/main/LICENSE.TXT"
+    },
+    "version": "v1"
+  },
+  "paths": {
+    "/api/Animation": {
+      "get": {
+        "tags": [
+          "Animation"
+        ],
+        "summary": "Gets the list of all Animations.",
+        "responses": {
+          "200": {
+            "description": "If all requested Animations are found"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Animation"
+        ],
+        "summary": "Create a new Animation.",
+        "description": "Sample request:\r\n\r\n    POST api/Animation\r\n    {        \r\n      \"title\": \"The Legend of Vox Machina\",\r\n      \"author\": \"John Doe\",\r\n      \"description\": \"This is my first award-winning animation of 2020\",\r\n      \"link\" : \"(any youtube link)\"\r\n    }",
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Animation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Animation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Animation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "If returns the newly created Animation"
+          },
+          "400": {
+            "description": "If created Animation is null",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Animation/{id}": {
+      "get": {
+        "tags": [
+          "Animation"
+        ],
+        "summary": "Gets the details of a single Animation.",
+        "operationId": "Get",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "If requested Animation was found"
+          },
+          "404": {
+            "description": "If requested Animation was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Animation"
+        ],
+        "summary": "Update a selected Animation.",
+        "description": "Sample request:\r\n\r\n    PUT api/Animation/{id}\r\n    {  \r\n      \"id\" : {id}\r\n      \"title\": \"New title\",\r\n      \"author\": \"New author\",\r\n      \"description\": \"New Description\",\r\n      \"link\" : \"New YouTube Link\"\r\n    }",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Animation"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Animation"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/Animation"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "If requested Animation was updated"
+          },
+          "400": {
+            "description": "If requested Animation was not updated",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Animation"
+        ],
+        "summary": "Delete a selected Animation.",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "If requested Animation was deleted"
+          },
+          "404": {
+            "description": "If requested Animation was not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Animation": {
+        "required": [
+          "link",
+          "title"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "title": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string",
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "nullable": true
+          },
+          "link": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
+      }
+    }
+  }
+}
