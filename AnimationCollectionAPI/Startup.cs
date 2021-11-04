@@ -56,7 +56,7 @@ namespace AnimationCollectionAPI
                     License = new OpenApiLicense
                     {
                         Name = "MIT License",
-                        Url = new Uri("https://github.com/Inklementia/AnimationCollectionAPI/blob/main/LICENSE.TXT")
+                        Url = new Uri("https://github.com/Inklementia/AnimationCollectionAPI/blob/main/LICENSE.txt")
                     },
                   
                 });
