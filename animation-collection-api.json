@@ -14,6 +14,12 @@
     },
     "version": "v1"
   },
+  "servers": [
+    {
+      "url": "http://ec2-54-89-162-123.compute-1.amazonaws.com/",
+      "description": "Sandbox server (uses test data)"
+    }
+  ],
   "paths": {
     "/api/Animation": {
       "get": {
@@ -34,7 +40,6 @@
         "summary": "Create a new Animation.",
         "description": "Sample request:\r\n\r\n    POST api/Animation\r\n    {        \r\n      \"title\": \"The Legend of Vox Machina\",\r\n      \"author\": \"John Doe\",\r\n      \"description\": \"This is my first award-winning animation of 2020\",\r\n      \"link\" : \"(any youtube link)\"\r\n    }",
         "requestBody": {
-          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -82,6 +87,8 @@
             "name": "id",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -115,6 +122,8 @@
             "name": "id",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -122,7 +131,6 @@
           }
         ],
         "requestBody": {
-          "description": "",
           "content": {
             "application/json": {
               "schema": {
@@ -167,6 +175,8 @@
             "name": "id",
             "in": "path",
             "required": true,
+            "style": "simple",
+            "explode": false,
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -246,7 +256,7 @@
             "nullable": true
           }
         },
-        "additionalProperties": { }
+        "additionalProperties": {}
       }
     }
   }
